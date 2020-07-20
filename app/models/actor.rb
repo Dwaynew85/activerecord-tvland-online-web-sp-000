@@ -19,5 +19,3 @@ origins = Show.new(:name => "X-Men Origins: Wolverine")
 pool = Show.new(:name => "Deadpool @")
 deadpool.show = pool
 wade.show = origins
-
-
