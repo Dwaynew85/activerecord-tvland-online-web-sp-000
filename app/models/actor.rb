@@ -12,14 +12,12 @@ class Actor < ActiveRecord::Base
 
 end
 
-# ryan = Actor.new(:first_name => "Ryan", :last_name => "Reynolds")
-# deadpool = Character.new(:name => "Deadpool")
-# wade = Character.new(:name => "Wade Wilson")
-# wade.actor = ryan
-# deadpool.actor = ryan
-# origins = Show.new(:name => "X-Men Origins: Wolverine")
-# pool = Show.new(:name => "Deadpool Is Awesomesauce")
-# deadpool.show = pool
-# wade.show = origins
-# origins.save
-# deadpool.save
+ryan = Actor.new(:first_name => "Ryan", :last_name => "Reynolds")
+deadpool = ryan.characters.build(:name => "Deadpool")
+wade = ryan.characters.build(:name => "Wade Wilson")
+origins = Show.new(:name => "X-Men Origins: Wolverine")
+pool = Show.new(:name => "Deadpool @")
+deadpool.show = pool
+wade.show = origins
+
+
